@@ -12,7 +12,6 @@ p {
   color: black
 }
 
-
 input {
   display: none;
   visibility: hidden;
@@ -20,36 +19,84 @@ input {
 
 label {
   display: flex;
-  padding: 0.5em;
+  padding: 0.5em 0 0.5em 0;
   text-align: center;
-  border-bottom: 1px solid #CCC;
   color: #1a91eb;
-  justify-content: center;
   align-items: center;
   font-weight: 600;
   font-size: 14px;
+  margin: 0;
 }
 
-#expand {
+.expand {
   max-height: 0px;
   overflow: hidden;
   transition: max-height 0.5s;
   background-color: white;
-}
 
-#toggle:checked ~ #expand {
-  max-height: 30vh;
-}
-
-#arrow-icon {
-  transition: transform 400ms ease;
-  color: black;
-}
-
-#toggle:checked ~ label {
-  #arrow-icon {
-  color: #1a91eb;
-  transform: rotate( -180deg );            
-  transition: transform 400ms ease, color 400ms ease;
+  &.expand-active {
+    max-height: 30vh;
   }
 }
+
+
+.arrow-icon {
+  width: 24px;
+  height: 24px;
+  transition: transform 400ms ease;
+  color: black;
+  background: url(../../../assets/material/arrow-down.png) no-repeat;
+
+  &.arrow-icon-active {
+    color: #1a91eb;
+    transform: rotate( -180deg );
+    transition: transform 400ms ease, color 400ms ease;
+  }
+}
+
+:host ::ng-deep .collapsible-body {
+  padding: 0 1% 0 1%;
+}
+
+
+
+// input {
+//   display: none;
+//   visibility: hidden;
+// }
+
+// label {
+//   display: flex;
+//   padding: 0.5em;
+//   text-align: center;
+//   border-bottom: 1px solid #CCC;
+//   color: #1a91eb;
+//   justify-content: center;
+//   align-items: center;
+//   font-weight: 600;
+//   font-size: 14px;
+// }
+
+// #expand {
+//   max-height: 0px;
+//   overflow: hidden;
+//   transition: max-height 0.5s;
+//   background-color: white;
+// }
+
+// #toggle:checked ~ #expand {
+//   max-height: 30vh;
+// }
+
+// #arrow-icon {
+//   transition: transform 400ms ease;
+//   color: black;
+// }
+
+// #toggle:checked ~ label {
+//   #arrow-icon {
+//   color: #1a91eb;
+//   transform: rotate( -180deg );            
+//   transition: transform 400ms ease, color 400ms ease;
+//   }
+// }

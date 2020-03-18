@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-collapse',
@@ -11,5 +11,9 @@ export class CollapseComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  show: boolean;
+
+
 
 }
