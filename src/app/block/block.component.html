@@ -1,0 +1,19 @@
+<ng-template [ngIf]="split" [ngIfElse]="full">
+  <div class="split-block">
+    <div class="body-block">
+      body block BODY BLOCK body block BODY BLOCK body block BODY BLOCK
+    </div>
+    <div class="icon-block">
+      <span *ngIf="showIcon">arrow</span>
+    </div>
+    <div class="body-block secondary">
+      body block BODY BLOCK body block BODY BLOCK body block BODY BLOCK
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #full>
+  <div class="body-block">
+    body block BODY BLOCK body block BODY BLOCK body block BODY BLOCK
+  </div>
+</ng-template>

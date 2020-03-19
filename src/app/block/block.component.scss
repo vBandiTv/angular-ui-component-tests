@@ -1,0 +1,31 @@
+.body-block {
+    background-color: var(--background-color);
+    padding: 1% 2%;
+    margin: 1% 0;
+    color: var(--text-color);
+    font-style: var(--text-font-style);
+    text-align: var(--text-align);
+
+    &.secondary {
+      color: var(--secondary-text-color);
+      text-align: var(--secondary-text-align);
+      font-style: var(--secondary-text-font-style);
+    }
+}
+
+.split-block {
+  display: flex;
+  flex-direction: row;
+
+  .icon-block {
+    margin: 0 1.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  .body-block {
+    flex: 5;
+  }
+}
