@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostBinding } from '@angular/core';
+import { Component, OnInit, Input, HostBinding, ElementRef } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
@@ -20,8 +20,17 @@ export class ButtonComponent implements OnInit{
   outline: boolean
   @Input()
   text: string
+  @Input()
+  set loading (val: boolean) {
+    const size = this.el.nativeElement.offsetWidth;
+    this._loading = val;
+  }
 
-  border: string
+  get loading (): boolean {
+    return this._loading
+  }
+
+  private _loading: boolean
 
   @HostBinding("attr.style")
   public get colorsAsStyle(): any {
@@ -33,13 +42,13 @@ export class ButtonComponent implements OnInit{
     return this.sanitizer.bypassSecurityTrustStyle(value);
   }
 
-  constructor (private sanitizer: DomSanitizer) {
+  constructor (private sanitizer: DomSanitizer, private el:ElementRef) {
     this.textColor = 'rgb(255, 255, 255)';
     this.backgroundColor = 'rgb(33, 150, 243)';
-    this.border = 'none'
   }
 
   ngOnInit () {
+    console.log(this.el.nativeElement.offsetWidth)
   }
 
 }

@@ -2,5 +2,6 @@
   class="otm-button"
   [disabled]="disabled"
   >
-  {{text}}
+  <app-loader *ngIf="loading"></app-loader>
+  <span *ngIf="!loading">{{text}}</span>
 </button>
