@@ -10,8 +10,10 @@ import { BlockComponent } from './block/block.component';
 import { ButtonComponent } from './button/button.component';
 import { LoaderComponent } from './loader/loader.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
+  imports:      [ BrowserModule, FormsModule, BrowserAnimationsModule ],
   declarations: [ AppComponent, HelloComponent, CollapseComponent, ChipsComponent, BlockComponent, ButtonComponent, LoaderComponent ],
   bootstrap:    [ AppComponent ]
 })

@@ -1,7 +1,8 @@
 <button 
   class="otm-button"
   [disabled]="disabled"
+  [style.width]="dynamicWidth"
   >
-  <app-loader *ngIf="loading"></app-loader>
-  <span *ngIf="!loading">{{text}}</span>
+  <app-loader *ngIf="loading" [color]="textColor" [@fadeEnterAnimation]></app-loader>
+  <span *ngIf="!loading" [@fadeEnterAnimation]>{{text}}</span>
 </button>

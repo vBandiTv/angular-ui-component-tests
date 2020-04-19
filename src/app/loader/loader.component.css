@@ -2,7 +2,7 @@
 
 svg.spinner
 {
-  width: 5vw;
+  width: var(--size);
   height: 5vh;
   font-family: 'RobotoDraft', sans-serif;
   font-size: 15px;
@@ -46,7 +46,7 @@ svg.spinner
   transform-origin: center;
   -webkit-animation: turn 1.35s ease-in-out infinite;
   animation: turn 1.35s ease-in-out infinite;
-  stroke: #ff1e00;
+  stroke: var(--color);
 }
 
 @-webkit-keyframes turn
