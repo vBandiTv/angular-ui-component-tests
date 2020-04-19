@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Angular';
+
+  clickTest (event) {
+    console.log(event);
+  }
 }

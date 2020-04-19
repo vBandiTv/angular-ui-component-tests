@@ -7,10 +7,11 @@ import { HelloComponent } from './hello.component';
 import { CollapseComponent } from './collapse/collapse.component';
 import { ChipsComponent } from './chips/chips.component';
 import { BlockComponent } from './block/block.component';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, CollapseComponent, ChipsComponent, BlockComponent ],
+  declarations: [ AppComponent, HelloComponent, CollapseComponent, ChipsComponent, BlockComponent, ButtonComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
