@@ -1,0 +1,112 @@
+// .otm-tooltip {
+
+  // position: relative;
+  // display: inline;
+#test-tooltip {
+  min-width: 0;
+}
+
+  .tooltip {
+          display: block;
+          position: relative;
+          top: 2em;
+          // right: 27vw;
+          // position: relative;
+          // width: max-content;
+          max-width: 17vw;
+          // margin-top: 45%;
+          // left: 11vw;
+          padding: 1.3%;
+          transform: translateX(-50%) scale(0);
+          transition: transform 0.3s ease-in-out;
+          transform-origin: top;
+          background: var(--background-color);
+          color: var(--text-color);
+          border-radius: 2px;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: normal;
+          box-shadow: var(--shadow);
+          z-index: 10;
+        }
+
+.tooltip-text {
+      position: absolute;
+      visibility: hidden;
+        // position: absolute;
+        // flex-basis: 100%;
+
+        
+
+  
+      
+        // &.tooltip-text--right {
+        //   ~ .tooltip {
+        //     left: auto;
+        //     right: -10px;
+        //     bottom: auto;
+        //     top: 50%;
+        //     transform: translate(100%, -50%) scale(0);
+        //     transform-origin: left center;
+        //     margin-top: 0;
+        //   }
+      
+        //   &:hover ~ .tooltip {
+        //     transform: translate(100%, -50%) scale(1);
+        //   }
+        // }
+      
+        // &.tooltip-text--left {
+        //   ~ .tooltip {
+        //     left: -15px;
+        //     right: auto;
+        //     bottom: auto;
+        //     top: 50%;
+        //     transform: translate(-100%, -50%) scale(0);
+        //     transform-origin: right center;
+        //     margin-top: 0;
+        //   }
+      
+        //   &:hover ~ .tooltip {
+        //     transform: translate(-100%, -50%) scale(1);
+        //   }
+        // }
+      }
+
+  .tooltip-wrapper {
+    // display: inline;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+      &:hover .tooltip-text {
+          visibility: visible;
+          opacity: 0.7;
+          // transform: translateX(-50%) scale(1);
+        }
+      
+        &:hover .tooltip {
+          // visibility: visible;
+          // opacity: 0.7;
+          transform: translateX(-50%) scale(1);
+        }
+    // position: absolute;
+    // display: inline;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+
+    
+      
+      // .tooltip-text--top ~ .tooltip {
+      //   margin-top: 3%;
+      //   transform: translateX(-50%) scale(0);
+      //   transform-origin: bottom center;
+      // }
+  }
+// }
+
+//  :host ::ng-deep {
+//   width: fit-content;
+//  }
