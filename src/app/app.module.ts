@@ -13,10 +13,11 @@ import { LoaderComponent } from './loader/loader.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TootlipComponent } from './tootlip/tootlip.component';
 import { TooltipbComponent } from './tooltipb/tooltipb.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, BrowserAnimationsModule ],
-  declarations: [ AppComponent, HelloComponent, CollapseComponent, ChipsComponent, BlockComponent, ButtonComponent, LoaderComponent, TootlipComponent, TooltipbComponent ],
+  declarations: [ AppComponent, HelloComponent, CollapseComponent, ChipsComponent, BlockComponent, ButtonComponent, LoaderComponent, TootlipComponent, TooltipbComponent, ModalComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

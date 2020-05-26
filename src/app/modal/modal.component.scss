@@ -1,0 +1,112 @@
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgba(0,0,0,0.5);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+
+    &-top {
+      align-items: flex-start;
+    }
+  }
+
+  .modal-content {
+    position: relative;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    min-width: 40%;
+    max-width: 60%;
+    min-height: 20%;
+    font-weight: 400;
+    overflow: auto;
+    z-index: 1;
+    background: #fff;
+    border-radius: 2px;
+    box-sizing: border-box;
+    box-shadow: 0 16px 24px 2px rgba(0,0,0,.14),
+                0 6px 30px 5px rgba(0,0,0,.12),
+                0 8px 10px -5px rgba(0,0,0,.2); // .mdl-shadow--16dp
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+
+    &.active {
+      opacity: 1;
+    }
+
+    .modal-header {
+      background-color: #ecf1f5;
+      box-shadow: 0 1px 0 0 #e4eaef;
+      
+
+      .modal__close {
+        z-index: 1100;
+        cursor: pointer;
+        position: absolute;
+        right: 16px;
+        top: 16px;
+      }
+
+      .modal__title { // .mdl-card__title
+        align-items: center;
+        color: #383f52;
+        display: flex;
+        justify-content: stretch;
+        line-height: 1.39;
+        padding: 18px;
+        font-weight: 400;
+        perspective-origin: 165px 56px;
+        transform-origin: 165px 56px;
+        box-sizing: border-box;
+
+        .modal__title-text {
+          align-self: flex-end;
+          color: inherit;
+          display: flex;
+          font-size: 24px;
+          font-weight: 300;
+          line-height: normal;
+          overflow: hidden;
+          transform-origin: 149px 48px;
+          margin: 0;
+        }
+      }
+    }
+
+  }
+
+
+  .modal-body {
+    color: rgba(0,0,0,.54);
+    font-size: 13px;
+    line-height: 18px;
+    overflow: hidden;
+    padding: 16px;
+    width: 90%;
+  }
+
+  .modal__footer {
+    font-size: 16px;
+    line-height: normal;
+    width: 100%;
+    background-color: transparent;
+    padding: 8px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(0,0,0,.1);
+  }
+
+}
