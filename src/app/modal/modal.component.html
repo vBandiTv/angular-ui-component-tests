@@ -8,8 +8,8 @@
       <div class="modal" [ngClass]="modalActive()">
           <div class="modal-content" [ngClass]="modalActive()">
             <div class="modal-header">
-              <div class="modal__title">
-                <h2 class="modal__title-text">Modal</h2>
+              <div class="modal-title">
+                <h2 class="modal-title-text">Modal</h2>
               </div>
 
               <button (click)="openModal()" class="mdl-button mdl-button--icon mdl-js-button  material-icons  modal__close">
@@ -22,8 +22,8 @@
               <ng-content select=".body"></ng-content>
             </div>
 
-            <div class="modal__footer">
-              footer
+            <div class="modal-footer">
+              <ng-content select=".footer"></ng-content>
             </div>
           </div>
       </div>

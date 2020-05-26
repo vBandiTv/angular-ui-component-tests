@@ -57,23 +57,23 @@
         z-index: 1100;
         cursor: pointer;
         position: absolute;
-        right: 16px;
-        top: 16px;
+        right: 3%;
+        top: 6%;
       }
 
-      .modal__title { // .mdl-card__title
+      .modal-title { // .mdl-card__title
         align-items: center;
         color: #383f52;
         display: flex;
         justify-content: stretch;
         line-height: 1.39;
-        padding: 18px;
+        padding: 3%;
         font-weight: 400;
         perspective-origin: 165px 56px;
         transform-origin: 165px 56px;
         box-sizing: border-box;
 
-        .modal__title-text {
+        .modal-title-text {
           align-self: flex-end;
           color: inherit;
           display: flex;
@@ -91,20 +91,20 @@
 
 
   .modal-body {
-    color: rgba(0,0,0,.54);
-    font-size: 13px;
+    color: #676d79;
+    font-size: 14px;
     line-height: 18px;
-    overflow: hidden;
-    padding: 16px;
+    overflow: auto;
+    padding: 3%;
     width: 90%;
   }
 
-  .modal__footer {
+  .modal-footer {
     font-size: 16px;
     line-height: normal;
     width: 100%;
     background-color: transparent;
-    padding: 8px;
+    padding: 3%;
     box-sizing: border-box;
     border-top: 1px solid rgba(0,0,0,.1);
   }
