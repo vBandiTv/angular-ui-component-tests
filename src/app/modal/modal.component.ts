@@ -1,26 +1,31 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, HostBinding, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-modal',
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.scss']
 })
-export class ModalComponent implements OnInit {
+export class ModalComponent {
 
-  constructor() { }
 
-  ngOnInit() {
+  @HostBinding('class') class = 'modal'
+
+  _modal: boolean
+  @Input()
+  set modal (value: boolean) {
+    this._modal = value;
+    this.modalChange.emit(value);
   }
 
-  modal: boolean
+  get modal (): boolean {
+    return this._modal
+  }
+  @Output()
+  modalChange: EventEmitter<boolean> = new EventEmitter();
 
   @Input()
   top: boolean
   @Input()
   title: string
-
-  openModal () {
-    this.modal = !this.modal;
-  }
 
 }

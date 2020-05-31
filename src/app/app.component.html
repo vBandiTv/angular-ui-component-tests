@@ -3,7 +3,8 @@
   Start editing to see some magic happen :)
 </p>
 
-<app-modal [top]="true" title="modal title">
+<app-button (click)="openModal()" text="modal"></app-button>
+<app-modal [top]="true" title="modal title" [(modal)]="modalRef">
   <div class="body">
     The BPMN file you were trying to import is invalid.
 Please check an error message below.

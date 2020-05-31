@@ -1,18 +1,18 @@
-<div class="content">
+<!-- <div class="content"> -->
       <!-- Modal using Material Design Lite -->
 
-      <button (click)="openModal()" class="mdl-button  mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+      <!-- <button (click)="openModal()" class="mdl-button  mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
         Launch Modal
-      </button>
+      </button> -->
 
-      <div class="modal" [ngClass]="{'top': top, 'active': modal}">
+      <div class="modal-wrapper" [ngClass]="{'top': top, 'active': modal}">
           <div class="modal-content" [ngClass]="{'top': top, 'active': modal}">
             <div class="modal-header">
               <div class="modal-title">
                 <h2 class="modal-title-text">{{title}}</h2>
               </div>
 
-              <button (click)="openModal()" class="mdl-button mdl-button--icon mdl-js-button  material-icons  modal__close">
+              <button (click)="modal = false" class="mdl-button mdl-button--icon mdl-js-button  material-icons  modal__close">
                 close
               </button>
             </div>
@@ -27,4 +27,4 @@
             </div>
           </div>
       </div>
-    </div>
+    <!-- </div> -->

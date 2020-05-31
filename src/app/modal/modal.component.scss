@@ -1,4 +1,4 @@
-.modal {
+.modal-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -33,7 +33,7 @@
     font-size: 16px;
     min-width: 40%;
     max-width: 60%;
-    min-height: 20%;
+    min-height: 10%;
     font-weight: 400;
     overflow: auto;
     z-index: 1;
@@ -122,3 +122,12 @@
   }
 
 }
+
+::ng-deep .modal {
+  .footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+

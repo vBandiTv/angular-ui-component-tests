@@ -9,6 +9,7 @@ export class AppComponent  {
   name = 'Angular';
 
   loading = false
+  modalRef = false;
 
   clickTest (event) {
     console.log(event);
@@ -19,5 +20,9 @@ export class AppComponent  {
     setTimeout(() => {
       this.loading = false
     }, 3000)
+  }
+
+  openModal () {
+    this.modalRef = !this.modalRef;
   }
 }
