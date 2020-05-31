@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-modal',
@@ -14,12 +14,13 @@ export class ModalComponent implements OnInit {
 
   modal: boolean
 
+  @Input()
+  top: boolean
+  @Input()
+  title: string
+
   openModal () {
     this.modal = !this.modal;
-  }
-
-  modalActive () {
-    return this.modal ? 'active' : '';
   }
 
 }

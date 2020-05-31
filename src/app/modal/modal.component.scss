@@ -13,13 +13,14 @@
   visibility: hidden;
   opacity: 0;
   background-color: rgba(0,0,0,0.5);
-  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 
   &.active {
     visibility: visible;
     opacity: 1;
+    transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 
-    &-top {
+    &.top {
       align-items: flex-start;
     }
   }
@@ -41,11 +42,22 @@
     box-sizing: border-box;
     box-shadow: 0 16px 24px 2px rgba(0,0,0,.14),
                 0 6px 30px 5px rgba(0,0,0,.12),
-                0 8px 10px -5px rgba(0,0,0,.2); // .mdl-shadow--16dp
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+                0 8px 10px -5px rgba(0,0,0,.2);
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    transform: translateY(0%) scale(0);
+    transform-origin: top;
 
     &.active {
       opacity: 1;
+      transform: translateY(0%) scale(1);
+      transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+      transform-origin: top;
+      // opacity: 1;
+      // transition: opacity 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    &.top {
+      margin-top: 10%;
     }
 
     .modal-header {
