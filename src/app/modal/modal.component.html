@@ -1,13 +1,7 @@
-<!-- <div class="content"> -->
-      <!-- Modal using Material Design Lite -->
-
-      <!-- <button (click)="openModal()" class="mdl-button  mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
-        Launch Modal
-      </button> -->
-
       <div class="modal-wrapper" [ngClass]="{'top': top, 'active': modal}">
+        <div *ngIf="backgroundClose" class="background-event" (click)="backgroundEvent()"></div>
           <div class="modal-content" [ngClass]="{'top': top, 'active': modal}">
-            <div class="modal-header">
+            <div class="modal-header" *ngIf="!headless">
               <div class="modal-title">
                 <h2 class="modal-title-text">{{title}}</h2>
               </div>
@@ -25,4 +19,3 @@
             </div>
           </div>
       </div>
-    <!-- </div> -->

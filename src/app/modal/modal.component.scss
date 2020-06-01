@@ -25,15 +25,23 @@
     }
   }
 
+  .background-event {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+  }
+
   .modal-content {
     position: relative;
     opacity: 0;
     display: flex;
     flex-direction: column;
     font-size: 16px;
-    min-width: 40%;
-    max-width: 60%;
+    min-width: 30%;
+    max-width: 30%;
     min-height: 10%;
+    max-height: var(--modal-max-size);
+    overflow-y: auto;
     font-weight: 400;
     overflow: auto;
     z-index: 1;
@@ -57,36 +65,36 @@
     }
 
     &.top {
-      margin-top: 10%;
+      margin-top: 3%;
     }
 
     .modal-header {
-      background-color: #ecf1f5;
+      background-color: var(--header-color);
       box-shadow: 0 1px 0 0 #e4eaef;
+      padding: 3%;
+      display: flex;
+      flex-wrap: nowrap;
       
 
       .modal__close {
         z-index: 1100;
         cursor: pointer;
-        position: absolute;
-        right: 3%;
-        top: 6%;
-        background: url(../../assets/close.svg) no-repeat;
-        width: 30px;
-        height: 30px;
+        background: url(../../assets/close-24.svg) no-repeat;
+        width: 24px;
+        height: 24px;
       }
 
       .modal-title { // .mdl-card__title
         align-items: center;
-        color: #383f52;
+        color: var(--header-text-color);
         display: flex;
         justify-content: stretch;
         line-height: 1.39;
-        padding: 3%;
         font-weight: 400;
         perspective-origin: 165px 56px;
         transform-origin: 165px 56px;
         box-sizing: border-box;
+        flex: 10;
 
         .modal-title-text {
           align-self: flex-end;
@@ -111,7 +119,6 @@
     line-height: 18px;
     overflow: auto;
     padding: 3%;
-    width: 90%;
   }
 
   .modal-footer {
@@ -129,7 +136,7 @@
 ::ng-deep .modal {
   .footer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: var(--footer-align);
   }
 }
 

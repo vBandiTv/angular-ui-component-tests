@@ -1,4 +1,5 @@
 import { Component, Input, HostBinding, Output, EventEmitter } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-modal',
@@ -7,8 +8,13 @@ import { Component, Input, HostBinding, Output, EventEmitter } from '@angular/co
 })
 export class ModalComponent {
 
+  constructor (private sanitizer: DomSanitizer) {
+    this.footerAlign = 'left';
+    this.headerColor = '#ecf1f5';
+    this.headerTextColor = '#383f52';
+  }
 
-  @HostBinding('class') class = 'modal'
+  readonly footerAlignKeys: any = {right: 'flex-start', center: 'center', left: 'flex-end'}
 
   _modal: boolean
   @Input()
@@ -27,5 +33,31 @@ export class ModalComponent {
   top: boolean
   @Input()
   title: string
+  @Input()
+  headless: boolean
+  @Input()
+  footerAlign: string
+  @Input()
+  headerColor: string
+  @Input()
+  headerTextColor: string
+  @Input()
+  smallModal: boolean
+  @Input()
+  backgroundClose: boolean
+
+  @HostBinding('class') class = 'modal';
+  @HostBinding("attr.style")
+  public get varAsStyle(): any {
+    let value = `--footer-align: ${this.footerAlignKeys[this.footerAlign]};`;
+    value += `--header-color: ${this.headerColor};`;
+    value += `--header-text-color: ${this.headerTextColor};`;
+    value += '--modal-max-size: ' + (this.smallModal ? '30%' : '90%') + ';';
+    return this.sanitizer.bypassSecurityTrustStyle(value);
+  }
+
+  backgroundEvent () {
+    this.modal = false;
+  }
 
 }
