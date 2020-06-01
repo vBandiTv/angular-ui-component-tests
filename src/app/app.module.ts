@@ -14,7 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TootlipComponent } from './tootlip/tootlip.component';
 import { TooltipbComponent } from './tooltipb/tooltipb.component';
 import { ModalComponent } from './modal/modal.component';
-import { DragAndDropComponent } from './dnd/dnd.component';
+import { DndComponent } from './dnd/dnd.component';
 import { DndDirective } from './dnd/dnd.directive';
 
 @NgModule({

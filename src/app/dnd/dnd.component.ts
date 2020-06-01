@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: './dnd.component.html',
   styleUrls: ['./dnd.component.scss']
 })
-export class DragAndDropComponent {
+export class DndComponent {
 
   files: any[] = [];
 
