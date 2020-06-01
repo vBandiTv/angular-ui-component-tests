@@ -15,11 +15,11 @@ import { TootlipComponent } from './tootlip/tootlip.component';
 import { TooltipbComponent } from './tooltipb/tooltipb.component';
 import { ModalComponent } from './modal/modal.component';
 import { DragAndDropComponent } from './drag-and-drop/drag-and-drop.component';
-import { DragAndDropDirective } from './drag-and-drop/drag-and-drop.directive';
+import { DndDirective } from './drag-and-drop/dnd.directive';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, BrowserAnimationsModule ],
-  declarations: [ AppComponent, HelloComponent, CollapseComponent, ChipsComponent, BlockComponent, ButtonComponent, LoaderComponent, TootlipComponent, TooltipbComponent, ModalComponent, DragAndDropComponent,DragAndDropDirective ],
-  bootstrap:    [ AppComponent ]
+  imports: [ BrowserModule, FormsModule, BrowserAnimationsModule ],
+  declarations: [ AppComponent, HelloComponent, CollapseComponent, ChipsComponent, BlockComponent, ButtonComponent, LoaderComponent, TootlipComponent, TooltipbComponent, ModalComponent, DragAndDropComponent, DndDirective ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

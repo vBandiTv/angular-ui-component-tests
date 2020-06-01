@@ -1,16 +1,9 @@
-import {
-  Directive,
-  Output,
-  Input,
-  EventEmitter,
-  HostBinding,
-  HostListener
-} from '@angular/core';
+import { Directive, Output, Input, EventEmitter, HostBinding, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[dragAndDrop]'
+  selector: '[dnd]'
 })
-export class DragAndDropDirective {
+export class DndDirective {
   @HostBinding('class.fileover') fileOver: boolean;
   @Output() fileDropped = new EventEmitter<any>();
 
