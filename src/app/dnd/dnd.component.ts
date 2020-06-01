@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-drag-and-drop',
-  templateUrl: './drag-and-drop.component.html',
-  styleUrls: ['./drag-and-drop.component.scss']
+  selector: 'app-dnd',
+  templateUrl: './dnd.component.html',
+  styleUrls: ['./dnd.component.scss']
 })
 export class DragAndDropComponent {
 
