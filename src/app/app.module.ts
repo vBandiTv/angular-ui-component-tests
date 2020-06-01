@@ -14,10 +14,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TootlipComponent } from './tootlip/tootlip.component';
 import { TooltipbComponent } from './tooltipb/tooltipb.component';
 import { ModalComponent } from './modal/modal.component';
+import { DragAndDropComponent } from './drag-and-drop/drag-and-drop.component';
+import { DragAndDropDirective } from './drag-and-drop/drag-and-drop.directive';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, BrowserAnimationsModule ],
-  declarations: [ AppComponent, HelloComponent, CollapseComponent, ChipsComponent, BlockComponent, ButtonComponent, LoaderComponent, TootlipComponent, TooltipbComponent, ModalComponent ],
+  declarations: [ AppComponent, HelloComponent, CollapseComponent, ChipsComponent, BlockComponent, ButtonComponent, LoaderComponent, TootlipComponent, TooltipbComponent, ModalComponent, DragAndDropComponent,DragAndDropDirective ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
