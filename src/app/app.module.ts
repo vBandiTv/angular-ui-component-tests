@@ -14,10 +14,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TootlipComponent } from './tootlip/tootlip.component';
 import { TooltipbComponent } from './tooltipb/tooltipb.component';
 import { ModalComponent } from './modal/modal.component';
+import { DndComponent } from './dnd/dnd.component';
+import { DndDirective } from './dnd/dnd.directive';
 
 @NgModule({
   imports: [ BrowserModule, FormsModule, BrowserAnimationsModule ],
-  declarations: [ AppComponent, HelloComponent, CollapseComponent, ChipsComponent, BlockComponent, ButtonComponent, LoaderComponent, TootlipComponent, TooltipbComponent, ModalComponent],
+  declarations: [ AppComponent, HelloComponent, CollapseComponent, ChipsComponent, BlockComponent, ButtonComponent, LoaderComponent, TootlipComponent, TooltipbComponent, ModalComponent, DndComponent, DndDirective],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
